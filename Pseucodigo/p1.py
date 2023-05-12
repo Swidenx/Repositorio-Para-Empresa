@@ -1,0 +1,32 @@
+import tkinter as tk
+ventana = tk.Tk()
+
+ventana.geometry("1350x610")
+ventana.title("Programa de obesidad")
+ventana.columnconfigure(0, weight=1)
+ventana.columnconfigure(1, weight=1)
+ventana.columnconfigure(2, weight=1)
+
+ventana.rowconfigure(0, minsize=20)
+ventana.rowconfigure(1, weight=1)
+ventana.rowconfigure(2, minsize=20)
+ventana.rowconfigure(3, weight=1)
+ventana.rowconfigure(4, minsize=20)
+ventana.rowconfigure(5, weight=1)
+ventana.rowconfigure(6, minsize=20)
+fuente = ("Arial", 12)
+
+boton_verificar = tk.Button(ventana, text="Verificar tu problema", font=fuente)
+boton_consejos = tk.Button(ventana, text="Consejos generales", font=fuente)
+boton_consulta = tk.Button(ventana, text="Consulta", font=fuente)
+descripcion_verificar = tk.Label(ventana, text="Haz clic en el botón para verificar si tu problema de obesidad se debe a ansiedad o depresión.", font=fuente)
+descripcion_consejos = tk.Label(ventana, text="Haz clic en el botón para obtener consejos generales sobre cómo tratar la obesidad.", font=fuente)
+descripcion_consulta = tk.Label(ventana, text="Haz clic en el botón para consultar con un profesional sobre tu problema de obesidad.", font=fuente)
+
+boton_verificar.grid(row=1, column=1, pady=10)
+descripcion_verificar.grid(row=2, column=1)
+boton_consejos.grid(row=3, column=1, pady=10)
+descripcion_consejos.grid(row=4, column=1)
+boton_consulta.grid(row=5, column=1, pady=10)
+descripcion_consulta.grid(row=6, column=1)
+ventana.mainloop()
